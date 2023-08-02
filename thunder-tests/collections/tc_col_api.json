@@ -1,84 +1,64 @@
 {
-    "_id": "bdb7c19a-8a06-4639-8e53-f5cce7ab9661",
+    "_id": "a15759ce-59ed-4e84-bb66-df5ac7be82aa",
     "colName": "API",
-    "created": "2023-05-04T14:32:43.630Z",
-    "sortNum": 10000,
+    "created": "2023-08-01T15:06:46.013Z",
+    "sortNum": 20000,
     "folders": [],
     "requests": [
         {
-            "_id": "a40cb4d3-ea3a-4fb3-8ec6-17b5b0a1af5e",
-            "colId": "bdb7c19a-8a06-4639-8e53-f5cce7ab9661",
+            "_id": "8831f10f-0015-4c03-b5a0-e00b860de806",
+            "colId": "a15759ce-59ed-4e84-bb66-df5ac7be82aa",
             "containerId": "",
             "name": "Home",
             "url": "{{API}}",
             "method": "GET",
-            "sortNum": 20000,
-            "created": "2023-05-04T14:32:56.414Z",
-            "modified": "2023-05-04T14:49:44.985Z",
+            "sortNum": 10000,
+            "created": "2023-08-01T15:07:16.573Z",
+            "modified": "2023-08-01T15:07:26.397Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "4e2af5fc-455d-4c8b-b57a-e80656332349",
-            "colId": "bdb7c19a-8a06-4639-8e53-f5cce7ab9661",
+            "_id": "9a94e7fe-5e70-42d4-a927-632005b23a4c",
+            "colId": "a15759ce-59ed-4e84-bb66-df5ac7be82aa",
             "containerId": "",
-            "name": "Path-Variable",
-            "url": "{{API}}/path-variable/first/second",
+            "name": "Mono",
+            "url": "{{API}}/mono",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-08-01T15:07:29.092Z",
+            "modified": "2023-08-01T15:07:46.860Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8a23a2d3-d6f7-48ae-97dd-01b1bfb9a431",
+            "colId": "a15759ce-59ed-4e84-bb66-df5ac7be82aa",
+            "containerId": "",
+            "name": "Flux",
+            "url": "{{API}}/flux",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2023-05-04T14:49:58.694Z",
-            "modified": "2023-05-04T14:51:31.666Z",
+            "created": "2023-08-01T15:07:53.108Z",
+            "modified": "2023-08-01T15:54:47.327Z",
             "headers": [],
             "params": [],
             "tests": []
         },
         {
-            "_id": "4a8c7247-7d08-4373-b898-428f7978199f",
-            "colId": "bdb7c19a-8a06-4639-8e53-f5cce7ab9661",
+            "_id": "ffa71512-d8fe-4957-b35f-4eaf16fad050",
+            "colId": "a15759ce-59ed-4e84-bb66-df5ac7be82aa",
             "containerId": "",
-            "name": "Request-Param",
-            "url": "{{API}}/request-param?first=TheFirst&second=This-is-Optaional",
+            "name": "Flux-Stream",
+            "url": "{{API}}/flux-stream",
             "method": "GET",
             "sortNum": 40000,
-            "created": "2023-05-04T14:52:09.655Z",
-            "modified": "2023-05-04T14:55:59.240Z",
-            "headers": [],
-            "params": [
-                {
-                    "name": "first",
-                    "value": "TheFirst",
-                    "isPath": false
-                },
-                {
-                    "name": "second",
-                    "value": "This-is-Optaional",
-                    "isPath": false
-                }
-            ],
-            "tests": []
-        },
-        {
-            "_id": "78f5b436-3918-4aa2-982a-17c561a53334",
-            "colId": "bdb7c19a-8a06-4639-8e53-f5cce7ab9661",
-            "containerId": "",
-            "name": "Post-Validate",
-            "url": "{{API}}/post-validate",
-            "method": "POST",
-            "sortNum": 50000,
-            "created": "2023-05-04T14:56:25.414Z",
-            "modified": "2023-05-04T15:08:13.739Z",
+            "created": "2023-08-01T15:08:19.194Z",
+            "modified": "2023-08-01T15:54:40.944Z",
             "headers": [],
             "params": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"username\": \"admin\",\n  \"password\": \"test\"\n}",
-                "form": []
-            },
-            "auth": {
-                "type": "bearer",
-                "bearer": "{{TOKEN}}"
-            },
             "tests": []
         }
     ]

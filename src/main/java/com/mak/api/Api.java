@@ -1,8 +1,12 @@
 package com.mak.api;
 
+import java.time.Duration;
+
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
@@ -13,16 +17,31 @@ public class Api {
     private String appVersion;
 
     @GetMapping()
-    public String index() throws Exception {
+    public String index() {
         return "API V1 : " + appVersion;
         // throw new Exception("Some Exception");
-        
 
     }
 
-    private void getValue(Mono<String> monoString) {
+    @GetMapping("/mono")
+    public Mono<String> mono() {
+        return Mono.just("Hello Reactive Programming").log();
 
-        monoString.subscribe(System.out::print);
+    }
+
+    @GetMapping("/flux")
+    public Flux<Integer> flux() {
+        return Flux.just(1, 2, 3, 4)
+                // .delayElements(Duration.ofSeconds(1))
+                .log();
+
+    }
+
+    @GetMapping(value = "/flux-stream", produces = MediaType.APPLICATION_NDJSON_VALUE)
+    public Flux<Integer> fluxStream() {
+        return Flux.just(1, 2, 3, 4)
+                .delayElements(Duration.ofSeconds(1))
+                .log();
 
     }
 

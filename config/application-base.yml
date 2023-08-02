@@ -20,7 +20,7 @@ logging:
   file:
     name: logs/app.log
   level:
-    root: WARN
+    root: INFO
     org:
       hibernate: error
       springframework: WARN
